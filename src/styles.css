@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-image: url(./assets/background.jpeg);
+}
+#Registry {
+	background-color: #f5e6e8;
+	margin-top: 10%;
+	height: 800px;
+	-webkit-box-shadow: -13px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -13px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: -13px 0px 23px 1px rgba(0, 0, 0, 0.75);
+}
+
+#Policy {
+	background-color: #432534;
+	margin-top: 10%;
+	height: 800px;
+	-webkit-box-shadow: 9px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 9px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 9px 0px 23px 1px rgba(0, 0, 0, 0.75);
+}
+
+#Welcomeing {
+	background-color: #f5e6e8;
+	margin-top: 10%;
+	/* height: 600px; */
+	-webkit-box-shadow: -13px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -13px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: -13px 0px 23px 1px rgba(0, 0, 0, 0.75);
+}
+#Ads {
+	background-color: #432534;
+	margin-top: 10%;
+	height: 800px;
+	-webkit-box-shadow: 9px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 9px 0px 23px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 9px 0px 23px 1px rgba(0, 0, 0, 0.75);
+}

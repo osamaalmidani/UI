@@ -1,0 +1,112 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8" id="Registry">
+            <h1 class="mt-5">Register at</h1> <img src="../../assets/Logo.png" alt="MigrationDm"
+                style="width: 200px;height: 30px;"> &reg;
+            <form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()" novalidate>
+                <div class="mb-5">
+                    <div class="row ml-3">
+                        <div class="col">
+
+                            <mat-form-field style="width:65%" class="mt-5 ">
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="firstName" [errorStateMatcher]="matcher" id="firstName"
+                                    name="firstName" placeholder="First name">
+                                <mat-error *ngIf="firstName.hasError('pattern') && !firstName.hasError('required')">
+                                    Please enter a valid name
+                                </mat-error>
+                                <mat-error *ngIf="firstName.hasError('required')">
+                                    The First name is required
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field style="width:60%" class="mt-5">
+                                <input matInput formControlName="lastName" [errorStateMatcher]="matcher" id="lastName"
+                                    name="lastName" placeholder="Last name">
+                                <mat-error *ngIf="lastName.hasError('pattern') && !lastName.hasError('required')">
+                                    Please enter a valid name
+                                </mat-error>
+                                <mat-error *ngIf="lastName.hasError('required')">
+                                    The Last name is required
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                    <div class="row ml-3">
+                        <div class="col">
+
+                            <mat-form-field style="width:80%" class="mt-5">
+                                <mat-label>Case Number</mat-label>
+                                <input matInput formControlName="caseNumber" [errorStateMatcher]="matcher"
+                                    id="caseNumber" name="caseNumber" placeholder="00000000">
+                                <mat-error *ngIf="caseNumber.hasError('pattern') && !caseNumber.hasError('required')">
+                                    Please enter a valid case number
+                                </mat-error>
+                                <mat-error *ngIf="caseNumber.hasError('required')">
+                                    The Case number is required
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+
+                    <div class="row ml-3">
+                        <div class="col">
+
+                            <mat-form-field style="width:80%" class="mt-5">
+                                <mat-label>Phone Number</mat-label>
+                                <input matInput formControlName="phoneNumber" [errorStateMatcher]="matcher"
+                                    id="phoneNumber" name="phoneNumber" placeholder="Ex. 0700000000">
+                                <mat-error *ngIf="phoneNumber.hasError('pattern') && !phoneNumber.hasError('required')">
+                                    Please enter a valid phone number
+                                </mat-error>
+                                <mat-error *ngIf="phoneNumber.hasError('required')">
+                                    The Phone number is required
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+
+                    <div class="row ml-3">
+                        <div class="col">
+                            <mat-form-field style="width:80%" class="mt-5">
+                                <mat-label>email</mat-label>
+                                <input matInput formControlName="emailAddress" [errorStateMatcher]="matcher"
+                                    id="emailAddress" name="emailAddress" placeholder="Ex. John@example.com">
+                                <mat-error *ngIf="emailAddress.hasError('email')">
+                                    Please enter a valid email address
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="caseExists">
+                    This is case is already registered!
+                </div>
+                <span class="mt-5 ml-3">
+                    <button mat-raised-button color="primary">Register</button>
+
+                </span>
+                <span class="mt-5 ml-3">
+                    <button mat-raised-button color="primary" routerLink="/">Back</button>
+
+                </span>
+
+
+            </form>
+
+        </div>
+
+
+        <div class="col-md-1 d-none d-lg-block" id="Ads">
+
+
+
+        </div>
+    </div>
+</div>
